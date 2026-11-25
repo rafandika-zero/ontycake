@@ -1,0 +1,108 @@
+# ==============================================================================
+# Onty Cake & Bakery - Production Apache Web Server Configuration (.htaccess)
+# Target Production Domain: https://ontycake.com/
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. REWRITE ENGINE ACTIVATION
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ----------------------------------------------------------------------------
+  # 2. FORCE HTTPS & CANONICAL DOMAIN (https://ontycake.com)
+  # ----------------------------------------------------------------------------
+  # Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://ontycake.com/$1 [R=301,L]
+
+  # Redirect non-www or any alias to apex domain https://ontycake.com
+  RewriteCond %{HTTP_HOST} ^www\.ontycake\.com$ [NC]
+  RewriteRule ^(.*)$ https://ontycake.com/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 3. WORDPRESS TO STATIC 301 REDIRECTS (PERMANENT MIGRATION MAPPINGS)
+  # Petunjuk: Petakan URL-URL lama dari WordPress ke halaman website baru.
+  # ----------------------------------------------------------------------------
+  # Contoh pola umum migrasi WordPress:
+  # Redirect 301 /tentang-kami/ https://ontycake.com/about.html
+  # Redirect 301 /produk/ https://ontycake.com/products.html
+  # Redirect 301 /katalog/ https://ontycake.com/products.html
+  # Redirect 301 /outlet/ https://ontycake.com/location.html
+  # Redirect 301 /lokasi/ https://ontycake.com/location.html
+  # Redirect 301 /cara-pesan/ https://ontycake.com/order.html
+  # Redirect 301 /kontak/ https://ontycake.com/order.html
+  # Redirect 301 /kelas-baking/ https://ontycake.com/baking-class.html
+  # Redirect 301 /baking-class/ https://ontycake.com/baking-class.html
+
+  # Matikan akses langsung ke endpoint backend WordPress lama jika masih ada bot yang memanggil
+  RewriteRule ^wp-(admin|includes|content|login\.php|config\.php) - [F,L,NC]
+  RewriteRule ^xmlrpc\.php - [F,L,NC]
+
+  # ----------------------------------------------------------------------------
+  # 4. CLEAN URLS (Optional: Mengakses /about langsung membuka about.html)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [L]
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. SECURITY HEADERS (Aman untuk embed maps, fonts, CDN)
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Lindungi dari MIME sniffing
+  Header set X-Content-Type-Options "nosniff"
+
+  # Lindungi dari clickjacking (izinkan self)
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Cross-Site Scripting Protection untuk browser legacy
+  Header set X-XSS-Protection "1; mode=block"
+
+  # Batasi referrer leak
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Izin fitur browser (Microphone, Kamera, Geolocation)
+  Header set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. PERFORMANCE & BROWSER CACHING (EXPIRES HEADERS)
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML file dicek lebih sering agar update cepat terlihat
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS dan JS diberi masa simpan 1 tahun (gunakan versioning query string seperti ?v=2.6)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Media & Aset gambar/video
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 7. GZIP & BROTLI COMPRESSION (Kecepatan Muat Maksimal)
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 8. PREVENT DIRECTORY BROWSING (Mencegah intip folder)
+# ------------------------------------------------------------------------------
+Options -Indexes

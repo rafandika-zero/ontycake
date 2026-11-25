@@ -1,0 +1,10 @@
+# ==============================================================================
+# Onty Cake & Bakery - Production Robots Configuration
+# Domain: https://ontycake.com
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Sitemap Index URL
+Sitemap: https://ontycake.com/sitemap.xml

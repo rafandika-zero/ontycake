@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Onty Cake &amp; Bakery</title>
+  <meta name="description"
+    content="Kelezatan autentik bolu gulung, bolu nastar, chiffon cake, roti sisir, dan custom cake khas Onty Cake & Bakery Pekalongan. Happiness in Every Moment.">
+  <!-- PREVIEW MODE: Cegah index mesin pencari di GitHub Pages. HAPUS / GANTI saat migrasi ke https://ontycake.com/ -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/icons/Logo onty 1.png">
+
+  <!-- Normalization / Reset CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts: Sofia Sans (Brand Guidelines Sofia Pro alternative) & Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sofia+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Style & Animations -->
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="home-page" data-bs-spy="scroll" data-bs-target="#bakeryNavbar" data-bs-offset="80">
+
+  <!-- Main Navigation Bar with Official Logo -->
+  <!-- Header Navigation (Grab-style App Layout for Mobile) -->
+  <nav class="navbar navbar-expand-lg navbar-bakery fixed-top" id="bakeryNavbar">
+    <div class="container">
+      <!-- Mobile Toggler Button (Left aligned on mobile, like Grab) -->
+      <button class="navbar-toggler border-0 shadow-none p-0 d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas">
+        <i class="bi bi-list fs-1" style="color:var(--kofta-brown);"></i>
+      </button>
+
+      <!-- Brand Logo (Centered on mobile, Left on desktop) -->
+      <a class="navbar-brand navbar-brand-logo py-0 mx-auto mx-lg-0" href="./">
+        <img src="assets/icons/Logo onty 1.png" alt="Onty Cake &amp; Bakery Logo">
+        <span class="brand-tagline-badge d-none d-lg-inline-block">Happiness In Every Moment</span>
+      </a>
+
+      <!-- Tagline on Mobile (Right aligned) -->
+      <div class="mobile-header-tagline d-lg-none">
+        Happiness In<br>Every Moment
+      </div>
+
+      <!-- Desktop Navigation Links (Only visible on lg and above) -->
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="desktopNavContent">
+        <ul class="navbar-nav align-items-lg-center mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery active" href="./">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="products/">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="location/">Toko</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="order/">Pemesanan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="social/">Sosial Media</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="baking-class/">Pilih Momen Kamu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bakery" href="about/">Tentang Onty</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Grab-Style Mobile Offcanvas Menu (Slide from Left) -->
+  <div class="offcanvas offcanvas-start grab-mobile-menu" tabindex="-1" id="mobileMenuOffcanvas"
+    aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom py-3 px-4">
+      <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
+        <img src="assets/icons/Logo onty 1.png" alt="Onty Logo" height="38">
+      </div>
+      <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body p-0">
+                  <div class="grab-menu-list">
+        <!-- Beranda -->
+        <a href="./" class="grab-menu-item active" style="background:#fdf6f0; color:var(--kofta-brown);">
+          <span class="grab-item-label fw-bold">
+            <i class="bi bi-house-door me-2" style="color:var(--caramelised-orange);"></i> Beranda
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow" style="color:var(--kofta-brown);"></i>
+        </a>
+        <!-- Produk -->
+        <a href="products/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-grid me-2 text-muted"></i> Produk
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+        <!-- Toko -->
+        <a href="location/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-geo-alt me-2 text-muted"></i> Toko
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+        <!-- Pemesanan -->
+        <a href="order/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-bag-check me-2 text-muted"></i> Pemesanan
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+        <!-- Sosial Media -->
+        <a href="social/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-share me-2 text-muted"></i> Sosial Media
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+        <!-- Pilih Momen Kamu -->
+        <a href="baking-class/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-mortarboard me-2 text-muted"></i> Pilih Momen Kamu
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+        <!-- Tentang Onty -->
+        <a href="about/" class="grab-menu-item">
+          <span class="grab-item-label">
+            <i class="bi bi-info-circle me-2 text-muted"></i> Tentang Onty
+          </span>
+          <i class="bi bi-chevron-right grab-item-arrow"></i>
+        </a>
+      </div>
+
+      <!-- Quick Contact in Mobile Drawer Footer -->
+      <div class="grab-menu-footer p-4 border-top mt-auto">
+        <div class="small text-muted mb-2 fw-bold">Hubungi CS WhatsApp:</div>
+        <div class="d-flex flex-column gap-2">
+          <a href="https://wa.me/6285642715011" target="_blank" class="btn btn-brand btn-sm text-start py-2 px-3">
+            <i class="bi bi-whatsapp me-2"></i> WA Outlet Toba
+          </a>
+          <a href="https://wa.me/6281367122547" target="_blank"
+            class="btn btn-brand btn-sm text-start py-2 px-3">
+            <i class="bi bi-whatsapp me-2"></i> WA Outlet Imam Bonjol
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section with Pure Video Background (Comd Video) -->
+  <section class="hero-slider" id="home">
+    <div class="video-background-wrapper">
+      <video id="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="assets/videos/Comd.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content fade-in-up">
+        <!-- Logo Stamp on Hero -->
+        <img src="assets/icons/Logo onty 1.png" alt="Onty Cake Wordmark" class="hero-brand-logo">
+        <div class="tagline">Happiness in Every Moment</div>
+        <h1>Indonesian Roll Cake<br>&amp; Artisan Bakery</h1>
+        <p>
+          Bolu gulung lembut, bolu nastar resep autentik, chiffon pandan wangi, dan roti sisir roombutter khas Pekalongan. Dipanggang segar setiap hari.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="products/" class="btn btn-bakery-orange px-4 py-3">Lihat Katalog Menu</a>
+          <a href="order/" class="btn btn-bakery-outline px-4 py-3">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Bakery Story Section -->
+  <section class="story-section" id="story">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="story-img-frame">
+            <img src="assets/images/about/heroproduct.JPEG"
+              alt="Bolu Onty Bakery" class="story-img" style="object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <div class="section-header text-start mb-4">
+            <span class="font-script script-sub">Since 2015 &bull; Pekalongan</span>
+            <h2>Our Bakery Story</h2>
+            <div class="header-divider justify-content-start">
+              <span class="line"></span>
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <p class="lead text-dark fs-6 fw-medium mb-3">
+            Onty Cake &amp; Bakery hadir dengan komitmen menghadirkan kehangatan dan kelezatan di setiap momen keluarga
+            melalui racikan resep rumahan khas Pekalongan.
+          </p>
+          <p class="text-body mb-4">
+            Struktur huruf 'O' pada logo kami melambangkan spesialisasi utama <em>Indonesian Roll Cake</em>, dipadu
+            dengan bulir gandum yang melambangkan penggunaan bahan baku alami berkualitas tinggi tanpa pengawet. Setiap
+            bolu dan roti dipanggang segar setiap pagi untuk menjamin rasa yang lembut dan harum.
+          </p>
+          <div class="row g-3 mb-2">
+            <div class="col-12">
+              <h5 class="mb-1 font-heading fs-4" style="color:var(--kofta-brown);">2 Outlets Resmi</h5>
+              <small class="text-muted text-uppercase">Jl. Toba No. 39 &amp; Jl. Imam Bonjol No. 47 &bull; Pekalongan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Halal Assurance & Certification Section (Matching Our Bakery Story Layout) -->
+  <section class="story-section pt-0" id="halal-assurance">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="story-img-frame">
+            <a href="assets/images/about/halal.png" target="_blank" title="Klik untuk memperbesar sertifikat halal">
+              <img src="assets/images/about/halal.png" 
+                   alt="Sertifikat Halal Resmi MUI Onty Cake &amp; Bakery" 
+                   class="story-img"
+                   style="object-fit: contain; background: #fff; padding: 10px;">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <div class="section-header text-start mb-4">
+            <span class="font-script script-sub">Jaminan Mutu &amp; Kehalalan</span>
+            <h2>Halal Certified Bakery</h2>
+            <div class="header-divider justify-content-start">
+              <span class="line"></span>
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <p class="lead text-dark fs-6 fw-medium mb-3">
+            Onty Cake &amp; Bakery menjamin setiap sajian dibuat dari bahan baku pilihan bermutu tinggi yang 100% Halal dan thoyyib.
+          </p>
+          <p class="text-body mb-4">
+            Kepercayaan dan ketenangan keluarga adalah prioritas utama kami. Dari proses pemilihan tepung, butter roombutter asli, telur segar harian, hingga proses pemanggangan di dapur, seluruh rantai produksi telah lulus verifikasi dan tersertifikasi resmi oleh MUI dan BPJPH.
+          </p>
+          <div class="row g-3 mb-2">
+            <div class="col-6">
+              <h5 class="mb-1 font-heading fs-4" style="color:var(--kofta-brown);">MUI No. 15200067361120</h5>
+              <small class="text-muted text-uppercase">Nomor Registrasi Resmi</small>
+            </div>
+            <div class="col-6">
+              <h5 class="mb-1 font-heading fs-4" style="color:var(--kofta-brown);">100% Thoyyib</h5>
+              <small class="text-muted text-uppercase">Tanpa Bahan Pengawet</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services (4 Pillars) -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="font-script script-sub">What we offer</span>
+        <h2>Our Bakery Services</h2>
+        <div class="header-divider">
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="service-box">
+            <div class="icon-wrap">
+              <i class="bi bi-fire"></i>
+            </div>
+            <h4>Fresh Daily Baking</h4>
+            <p>Dipanggang langsung setiap subuh untuk menjamin kelembutan, kesegaran, dan keharuman butter maksimal.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-box">
+            <div class="icon-wrap">
+              <i class="bi bi-cake2"></i>
+            </div>
+            <h4>Custom Cake (H-3)</h4>
+            <p>Kue ulang tahun tematik, anniversary, hingga wedding cake anggun yang dirancang personal sesuai impian
+              Anda.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-box">
+            <div class="icon-wrap">
+              <i class="bi bi-gift"></i>
+            </div>
+            <h4>Gift &amp; Hampers</h4>
+            <p>Paket hantaran hari raya dan cinderamata eksklusif lengkap dengan hardbox premium, kartu ucapan, dan pita
+              cantik.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-box">
+            <div class="icon-wrap">
+              <i class="bi bi-truck"></i>
+            </div>
+            <h4>City &amp; Out of Town</h4>
+            <p>Pengiriman cepat ke seluruh penjuru Kota Pekalongan dan pengemasan aman khusus pengiriman luar kota.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section (Home: 6 Featured Signature Items + Link to All Products) -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="font-script script-sub">Signature Bakery</span>
+        <h2>Menu Unggulan Pilihan Onty Cake</h2>
+        <div class="header-divider">
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+        <p class="text-muted mt-2">6 varian terfavorit pilihan pelanggan yang paling sering dipesan setiap hari di
+          Pekalongan.</p>
+      </div>
+
+      <!-- 6 Square Framed Product Grid on Home -->
+      <div class="row g-3 g-md-4 justify-content-center" id="homeFeaturedGrid">
+        <!-- Rendered dynamically via js/main.js (6 items) -->
+      </div>
+
+      <!-- Call to Action: View All Products -->
+      <div class="text-center mt-5 pt-3 border-top">
+        <p class="text-muted small mb-3">Tersedia lebih dari 100+ pilihan varian bolu gulung, roti manis, salt bread,
+          cookies, dan dessert box di katalog kami.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="products/" class="btn btn-brand px-5 py-3 fw-bold">
+            Lihat Semua Produk
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps Rating & Customer Reviews Section -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="font-script script-sub">Real Reviews</span>
+        <h2>Ulasan Pelanggan di Google Maps</h2>
+        <div class="header-divider">
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <!-- Google Rating Aggregate Badge -->
+      <div class="gmaps-badge-banner">
+        <div class="row align-items-center g-4 text-center text-md-start">
+          <div class="col-md-auto d-flex justify-content-center justify-content-md-start align-items-center gap-3">
+            <svg class="google-g-icon" viewBox="0 0 24 24">
+              <path fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+              <path fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+            </svg>
+            <div>
+              <div class="gmaps-score">4.8 <span class="fs-4 fw-normal text-muted">/ 5.0</span></div>
+              <div class="stars-gold">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <h5 class="mb-1" style="color:var(--kofta-brown);">Rating Luar Biasa di Google Maps</h5>
+            <p class="text-muted small mb-0">
+              Berdasarkan akumulasi ratusan ulasan pelanggan untuk <strong>Onty 1 (Jl. Toba - 4.7★)</strong> dan
+              <strong>Onty 2 (Jl. Imam Bonjol - 4.9★)</strong>.
+            </p>
+          </div>
+          <div class="col-md-auto text-md-end">
+            <a href="https://maps.google.com/?q=Onty+Cake+Jalan+Toba+Pekalongan" target="_blank"
+              class="btn btn-bakery-primary btn-sm px-3 py-2">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Lihat di Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Reviews Cards -->
+      <div class="row g-4">
+        <!-- Review 1: Ulasan Asli Pengunjung -->
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="review-avatar">DW</div>
+              <div>
+                <h6 class="mb-0 fw-bold" style="color:var(--kofta-brown);">Dyah Widyastuti</h6>
+                <div class="verified-buyer">
+                  <i class="bi bi-check-circle-fill"></i> Local Guide &bull; Ulasan Google
+                </div>
+              </div>
+            </div>
+            <div class="stars-gold small my-1">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="text-muted ms-2 small">Outlet Jl. Toba</span>
+            </div>
+            <p class="review-text">
+              &ldquo;Salah satu bakery homemade terenak di Pekalongan! Bolu gulung mocca meses dan bolu nastar cake-nya
+              moist banget, lembut, manisnya pas dan wangi butter. Wajib banget mampir buat beli oleh-oleh kalau ke
+              Pekalongan.&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2: Ulasan Asli Pengunjung -->
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="review-avatar" style="background:#fbe9e7; color:#b3542e;">FA</div>
+              <div>
+                <h6 class="mb-0 fw-bold" style="color:var(--kofta-brown);">Fajar Ardiansyah</h6>
+                <div class="verified-buyer">
+                  <i class="bi bi-check-circle-fill"></i> Local Guide &bull; Ulasan Google
+                </div>
+              </div>
+            </div>
+            <div class="stars-gold small my-1">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="text-muted ms-2 small">Outlet Imam Bonjol</span>
+            </div>
+            <p class="review-text">
+              &ldquo;Pelayanannya ramah dan tempatnya bersih. Roti sisir butter sama chiffon pandannya juara, lembut gak
+              bikin seret. Variasi rotinya juga banyak dan fresh dipanggang setiap hari. Rekomen buat keluarga!&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3: Ulasan Asli Pengunjung -->
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="review-avatar" style="background:#fff3e0; color:#e08141;">NR</div>
+              <div>
+                <h6 class="mb-0 fw-bold" style="color:var(--kofta-brown);">Nurul Rahmawati</h6>
+                <div class="verified-buyer">
+                  <i class="bi bi-check-circle-fill"></i> Pelanggan Terverifikasi
+                </div>
+              </div>
+            </div>
+            <div class="stars-gold small my-1">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="text-muted ms-2 small">Ulasan Google Maps</span>
+            </div>
+            <p class="review-text">
+              &ldquo;Pesan brownies dan bolu gulung buat hantaran acara kantor, packaging box-nya elegan dan rapi
+              banget. Kuenya tahan suhu ruang beberapa hari dan rasanya disukai semua rekan kantor.&rdquo;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Brand Logo -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo">
+            <img src="assets/icons/Logo onty 1.png" alt="Onty Cake Logo White">
+          </div>
+          <p class="small pe-lg-4">
+            <em>Happiness in Every Moment</em>. Pelopor Indonesian Roll Cake dan aneka bakery lembut khas Kota
+            Pekalongan dengan resep autentik berkualitas tinggi sejak 2015.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://instagram.com/ontycake" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com/@ontycake" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://youtube.com/@ontycake" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/6285642715011" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Halaman</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="./">Home</a></li>
+            <li><a href="products/">All Products</a></li>
+            <li><a href="about/">Tentang Onty</a></li>
+            <li><a href="location/">Store</a></li>
+            <li><a href="order/">Order Online</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Info &amp; Lainnya</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="social/">Social Media</a></li>
+            <li><a href="baking-class/">Choose Your Moment</a></li>
+            <li><a href="location/#reviews">Google Reviews (4.8★)</a></li>
+            <li><a href="https://wa.me/6285642715011">Konsultasi CS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5>Outlet Resmi</h5>
+          <div class="small mb-2">
+            <strong class="text-white">Onty 1 (Jl. Toba No. 39):</strong><br>
+            Buka 08.00 - 20.00 WIB &bull; WA: 0856 4271 5011
+          </div>
+          <div class="small">
+            <strong class="text-white">Onty 2 (Jl. Imam Bonjol No. 47):</strong><br>
+            Buka 08.00 - 20.00 WIB &bull; WA: 0813 6712 2547
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center small">
+        <div>&copy; 2026 Onty Cake &amp; Bakery. All rights reserved.</div>
+        <div>Happiness in Every Moment &bull; Pekalongan.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS Logic -->
+  <script src="js/main.js?v=2.2"></script>
+</body>
+
+</html>
